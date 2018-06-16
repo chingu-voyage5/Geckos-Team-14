@@ -2,6 +2,7 @@
 
 Attendance tracker application | Voyage-5 | chingu.io
 
-Team Member
+##Team Members
+
 Regina Mc Guire (Project Manager)
 Tiffany DeVine
