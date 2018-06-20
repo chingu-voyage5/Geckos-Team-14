@@ -15,8 +15,6 @@ export default class AddStudent extends Component {
   }
 
   handleChange(event) {
-    event.target.name;
-    event.target.value;
     this.setState({ [event.target.name]: event.target.value });
   }
 

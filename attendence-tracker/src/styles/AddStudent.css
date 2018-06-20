@@ -10,9 +10,6 @@
   font-size: 26px;
 }
 
-.add-student-name-label {
-}
-
 .add-student-name {
   display: flex;
   flex-direction: column;
