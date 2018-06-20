@@ -1,0 +1,44 @@
+.page-title-container {
+  margin: 0;
+  color: white;
+  background-color: black;
+  height: 80px;
+}
+
+.page-name {
+  padding: 20px;
+  vertical-align: center;
+}
+
+.student-list {
+  color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-list li {
+  padding: 18px;
+  border: solid 1px black;
+  margin: 15px;
+  font-size: 20px;
+  border-radius: 16px;
+}
+
+.student-list-title {
+  margin-left: 23px;
+  color: black;
+  font-size: 26px;
+}
+
+.student-list-container {
+  padding: 20px;
+}
+
+.student-manage-flex {
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+}
