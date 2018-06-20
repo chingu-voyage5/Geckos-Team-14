@@ -1,4 +1,5 @@
 import React from "react";
+import AddStudent from "./AddStudent";
 import "../styles/StudentManager.css";
 
 const StudentManager = () => {
@@ -25,7 +26,7 @@ const StudentManager = () => {
           <h3 className="student-list-title">Student List</h3>
           <ul className="student-list">{renderStudents()}</ul>
         </div>
-        <div className="add-student" />
+        <AddStudent />
       </div>
     </div>
   );
