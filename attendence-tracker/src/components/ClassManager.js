@@ -1,18 +1,17 @@
 import React from "react";
-import AddStudent from "./AddStudent";
+import AddClass from "./AddClass";
 //import "../styles/StudentManager.css";
 
-const StudentManager = () => {
-  const renderStudents = () => {
+const ClassManager = () => {
+  const renderClasses = () => {
     const dummyData = [
-      "Bill Krup",
-      "Sasha Snow",
-      "Garen Gillingham",
-      "Jared Jay",
-      "Su Walsh"
+      "Algebra",
+      "English",
+      "French",
+      "Spanish"
     ];
     return dummyData.map(item => (
-      <li key={item} className="studentName">
+      <li key={item} className="courseName">
         {item}
       </li>
     ));
@@ -20,16 +19,16 @@ const StudentManager = () => {
 
   return (
     <div className="page-title-container">
-      <h1 className="page-name">Add/Edit Students</h1>
+      <h1 className="page-name">Manage Courses</h1>
       <div className="student-manage-flex">
         <div className="student-list-container">
           <h3 className="student-list-title">Student List</h3>
-          <ul className="student-list">{renderStudents()}</ul>
+          <ul className="student-list">{renderClasses()}</ul>
         </div>
-        <AddStudent />
+        <AddClass />
       </div>
     </div>
   );
 };
 
-export default StudentManager;
+export default ClassManager;

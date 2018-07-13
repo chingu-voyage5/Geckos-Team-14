@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 //import "../styles/AddStudent.css";
 
-export default class AddStudent extends Component {
+export default class AddClass extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      firstName: "",
-      lastName: ""
+      courseName: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,10 +19,8 @@ export default class AddStudent extends Component {
 
   handleSubmit(event) {
     alert(
-      "A name was submitted: " +
-      this.state.firstName +
-      " " +
-      this.state.lastName
+      "A class name was submitted: " +
+      this.state.courseName
     );
     event.preventDefault();
   }
@@ -31,27 +28,21 @@ export default class AddStudent extends Component {
   render() {
     return (
       <div className="add-student-container-flex">
-        <h3 className="add-student-title">Add Student</h3>
+        <h3 className="add-student-title">Add Class</h3>
         <form onSubmit={this.handleSubmit} className="add-student-name">
           <label className="add-student-name-label">
-            Name:
+            Course Name:
             <input
               type="text"
-              name="firstName"
+              name="courseName"
               className="name-input"
               onChange={this.handleChange}
-              value={this.state.firstName}
+              value={this.state.courseName}
             />
-            <input
-              name="lastName"
-              type="text"
-              className="name-input"
-              onChange={this.handleChange}
-              value={this.state.lastName}
-            />
+
           </label>
           <button className="add-student-button" onSubmit={this.handleSubmit}>
-            Add Student
+            Add Class
           </button>
         </form>
       </div>
