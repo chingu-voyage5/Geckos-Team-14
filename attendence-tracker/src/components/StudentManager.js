@@ -20,7 +20,7 @@ const StudentManager = () => {
 
   return (
     <div className="page-title-container">
-      <h1 className="page-name">Manage Students</h1>
+      <h1 className="page-name">Add/Edit Students</h1>
       <div className="student-manage-flex">
         <div className="student-list-container">
           <h3 className="student-list-title">Student List</h3>

@@ -21,9 +21,9 @@ export default class AddStudent extends Component {
   handleSubmit(event) {
     alert(
       "A name was submitted: " +
-        this.state.firstName +
-        " " +
-        this.state.lastName
+      this.state.firstName +
+      " " +
+      this.state.lastName
     );
     event.preventDefault();
   }
