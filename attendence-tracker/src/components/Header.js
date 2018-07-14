@@ -5,8 +5,8 @@ export default class Header extends Component {
     return (
       <header>
         <ul>
-          <li>Manage Students</li>
-          <li>Manage Classes</li>
+          <li><button>Manage Classes</button></li>
+          <li><button>Add/Edit Students</button></li>
         </ul>
       </header>
     );
