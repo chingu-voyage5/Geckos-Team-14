@@ -1,0 +1,45 @@
+.page-title-container {
+  margin: 0;
+  color: white;
+  background-color: black;
+  height: 80px;
+}
+
+.page-name {
+  padding: 20px;
+  vertical-align: center;
+}
+
+.class-list {
+  color: black;
+  list-style: none;
+  padding: 0px 200px 0px 0px;
+  margin: 0;
+}
+
+.class-list li {
+  padding: 18px;
+  border: solid 1px black;
+  margin: 15px;
+  font-size: 20px;
+  border-radius: 16px;
+}
+
+.class-list-title {
+  margin-left: 23px;
+  color: black;
+  font-size: 26px;
+}
+
+.class-list-container {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.class-manage-flex {
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+}
