@@ -29,3 +29,5 @@ const ClassManager = () => {
       </div>
     </div>
   )
+};
+export default ClassManager;
