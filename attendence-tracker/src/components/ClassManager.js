@@ -22,13 +22,10 @@ const ClassManager = () => {
       <h1 className="page-name">Manage Courses</h1>
       <div className="student-manage-flex">
         <div className="student-list-container">
-          <h3 className="student-list-title">Student List</h3>
+          <h3 className="student-list-title">Class List</h3>
           <ul className="student-list">{renderClasses()}</ul>
         </div>
         <AddClass />
       </div>
     </div>
-  );
-};
-
-export default ClassManager;
+  )
