@@ -5,31 +5,49 @@ module.exports = {
         _id: 500,
         firstName: "Amy",
         lastName: "Begoud",
-        classes: ['English'],
+        courses: ['English', 'Geometry'],
         attendance: []
       },
       {
         _id: 504,
         firstName: "Davis",
         lastName: "Yaton",
-        classes: ['English', 'Spanish'],
+        courses: ['Algebra', 'Spanish'],
         attendance: []
       },
       {
         _id: 503,
         firstName: "Peter",
         lastName: "Nichols",
-        classes: ['Spanish'],
+        courses: ['Spanish', 'Geometry'],
         attendance: []
       },
       {
         _id: 507,
         firstName: "Jane",
         lastName: "Easton",
-        classes: ['French'],
+        courses: ['Algebra', 'English'],
+        attendance: []
+      }
+    ],
+    courses: [
+      {
+        courseName: "Algebra",
+        attendance: []
+      },
+      {
+        courseName: "English",
+        attendance: []
+      },
+      {
+        courseName: "Geometry",
+        attendance: []
+      }, {
+        courseName: "Spanish",
         attendance: []
       }
     ]
+
   }
 };
 
