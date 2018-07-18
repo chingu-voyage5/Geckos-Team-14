@@ -12,6 +12,8 @@ export default class AttendanceManager extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitPresent = this.handleSubmitPresent.bind(this);
+    this.handleSubmitAbsent = this.handleSubmitAbsent.bind(this);
   };
   handleChange(e) {
     this.setState({ value: e.target.value });
@@ -21,6 +23,14 @@ export default class AttendanceManager extends Component {
     this.setState({ chosenCourse: this.state.value })
     e.preventDefault();
   };
+  handleSubmitPresent(e) {
+    alert('This student is present')
+    e.preventDefault();
+  };
+  handleSubmitAbsent(e) {
+    alert('This student is absent')
+    e.preventDefault();
+  };
   createCourseList = () => {
     let courseList = [];
     for (var label in this.state.courses) {
@@ -28,15 +38,17 @@ export default class AttendanceManager extends Component {
     }
     return courseList;
   };
-  createStudentList = () => {
+  createStudentList = (chosenCourse) => {
     let studentList = [];
     for (var key in this.state.students) {
-      studentList.push(this.state.students[key].firstName + ' ' + this.state.students[key].lastName);
+      if (this.state.students[key].courses.includes(chosenCourse))
+        studentList.push(this.state.students[key].firstName + ' ' + this.state.students[key].lastName);
     }
     return studentList;
   };
 
-  renderList = (list) => {
+
+  renderCourseList = (list) => {
     let renderedList = list.map(item => (
       <option key={item} value={item} >
         {item}
@@ -44,23 +56,25 @@ export default class AttendanceManager extends Component {
     ));
     return renderedList;
   };
-  renderStudentList = (studentList) => {
-
+  renderStudentList = (chosenCourse) => {
     if (this.state.chosenCourse === '') {
       return <div><p>No Course Selected</p></div>
     } else {
-
       return <div><p>Course selected: {this.state.chosenCourse}</p>
-        <ul>
-          <p>{studentList}</p>
-        </ul>
+        {this.createStudentList(chosenCourse).map((student) =>
+          <p key={student}>{student} <button className="present-button" onClick={this.handleSubmitPresent}>
+            Present
+          </button>
+            <button className="absent-button" onClick={this.handleSubmitAbsent}>
+              Absent
+           </button></p>)}
       </div>
     }
 
   };
   render() {
-    let currentCourseList = this.renderList(this.createCourseList());
-    let currentStudentList = this.renderStudentList(this.createStudentList());
+    let currentCourseList = this.renderCourseList(this.createCourseList());
+    let currentStudentList = this.renderStudentList(this.state.chosenCourse);
     return (
       <div>
         <h1>Take Attendance</h1>
